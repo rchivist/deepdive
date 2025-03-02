@@ -296,22 +296,48 @@ Well, because *the `sizeof()` operator returns the size in bytes of the **type**
 
 **Warning:** Use AI to understand concepts—don't copy and paste mindlessly. You're smart enough to realize the difference.
 
+
 ## Boolean Operators
 
-These are used to chain up multiple expressions, if this *and* this are equals to this, or if this *or* this is equals to this, or if this is not this.
-Something like that.. you will learn as you continue further.
+These are used to chain multiple expressions together, such as checking if this *and* that are true, or if this *or* that is true, or if something is *not* true. You'll get the hang of it as you continue coding.
 
-Operator Meaning
- &&       and
- ||        or
- !        not
+**Operator Meaning**
+```
+&&       and
+||       or
+!        not
+```
 
- ```c
- int x = 12;
- if (!(x = 12)){
-    printf("this message won't print because condition says if x is not 12 but the fact is x is 12!")
- }else{
-    printf("this messgae will print")
- }
- ```
- 
+#### Not (`!`):
+```c
+int x = 12;
+if (!(x == 12)){
+    printf("This message won't print because the condition checks if x is NOT 12, but x is 12!");
+}else{
+    printf("This message will print");
+}
+```
+
+---
+
+#### And (`&&`):
+```c
+int x = 12, y = 23;
+if (x == 12 && y == 24){
+    printf("This message will only print if and only if both conditions are true! In this case, it's not as you can see.");
+}else{
+    printf("This message will only print if at least one of the conditions is false.");
+}
+```
+
+---
+
+#### Or (`||`):
+```c
+int x = 12, y = 23;
+if (x == 12 || y == 24){
+    printf("This message will print if any one of the conditions is true.");
+}else{
+    printf("This message will only print if both conditions are false.");
+}
+```
