@@ -295,3 +295,23 @@ Well, because *the `sizeof()` operator returns the size in bytes of the **type**
 > **Tip:** If you don't understand bytes, size, and memory-related concepts, you can refer to the ultra basics directory where I have covered these simple topics. Or you can just use ChatGPT or any other AI to explain each concept in detail.
 
 **Warning:** Use AI to understand concepts—don't copy and paste mindlessly. You're smart enough to realize the difference.
+
+## Boolean Operators
+
+These are used to chain up multiple expressions, if this *and* this are equals to this, or if this *or* this is equals to this, or if this is not this.
+Something like that.. you will learn as you continue further.
+
+Operator Meaning
+ &&       and
+ ||        or
+ !        not
+
+ ```c
+ int x = 12;
+ if (!(x = 12)){
+    printf("this message won't print because condition says if x is not 12 but the fact is x is 12!")
+ }else{
+    printf("this messgae will print")
+ }
+ ```
+ 

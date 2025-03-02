@@ -31,5 +31,9 @@ int main(void){
     }
 }
 ```
+As you can see if-else conditional is pretty easy once you get the hang of it.
+Try to create a program to check if a number is even or odd. Also i'll explain you scanf() for user inputs so that you can write a interactive program that'll take an user input and outputs if entered number is even or odd.
+
+## scanf() || user input
 
 
