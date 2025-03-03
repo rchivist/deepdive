@@ -10,31 +10,30 @@ The ▶️ button is using a **GCC wrapper**. Remember when you installed the GN
 
 ## What is a Wrapper?
 
-A **wrapper** is a script or program that acts as an intermediary between the user and the actual **GCC (GNU Compiler Collection)** compiler. Instead of interacting with the compiler manually, you just click a button, and it handles everything for you.
+A **wrapper** is a script or program that acts as an intermediary between the user and the actual **GCC (GNU Compiler Collection)** compiler. Instead of interacting with the compiler manually, you just click a button, and it handles everything for you. Basically, it's a button when you press it a program runs that tells compiler -- "This is the code and i want you to run it!"
 
-But since we are here to **learn**, let's do it the manual way!
 
 ## Manually Compiling a C Program
 
-Open your terminal and type:
+Open your terminal{Ctrl + J} and type:
 
 ```bash
-gcc -o <output_file_name> <your_c_file>.c
+gcc -o <some random name> <your_c_file>.c
 ```
 
 ### Breaking It Down:
 
 - `gcc` – Calls the GCC compiler.
-- `-o <output_file_name>` – Specifies the name of the compiled output file.
+- `-o <some random name>` - Something you want to name the new file
 - `<your_c_file>.c` – The source file you want to compile.
 
-For example, if your file is `hello.c`, run:
+For example, Suppose my file is `hello.c`, and i ran:
 
 ```bash
 gcc -o hello hello.c
 ```
 
-Now, you'll see a new file named `hello` (without `.c`). This is your **machine code**.
+If you do this too, you'll see a new file named `hello` (without `.c`). This is your **machine code**. Don't try to open it you'll just see cryptic looking letter that won't make any sense.
 
 ## Running the Compiled Program
 
@@ -52,6 +51,12 @@ Hello, World!
 
 ---
 
-Now you understand what happens behind the scenes when you run a C program. And now we'll learn basics of the programming.
+Now you understand what happens behind the scenes when you run a C program. You might be wondering—"If this was machine code, why didn’t I see 0s and 1s?"
 
-> **Tip:** If you're a beginner then I am sure you're also worried about people around you saying that *"don't learn this language, learn Python, learn Java, don't listen to others learn JavaScript"*. Then let me assure you it won't matter what you learn because the definition of function, and other stuff like variable, arguments, etc., all remain the same in every language. Learning C is recommended first because it'll tell you what's happening under the hood!
+That’s a great question! And I also know you didn’t think of it, but I’ll answer it anyway.
+
+   > Those are 0s and 1s, but when I say 0s and 1s, I don’t mean literal letters—those are binary instructions, not strings! For you, they appear as 0s and 1s, but for a computer, it all comes down to on and off. This might not make sense to you now, but you’ll understand what I mean soon.
+
+So, back to the answer… As I said, these are binary instructions, but our IDE doesn’t know that. It tries to interpret those 0s and 1s as characters, which results in cryptic symbols like @ ! $ #.
+
+> **Tip:** If you're a beginner then I am sure you're also worried about people around you saying that *"don't learn this language, learn Python, learn Java, don't listen to others learn JavaScript"*. Then let me assure you it won't matter what you learn because the definition of function, and other stuff like variable, arguments, etc., all remain the same in every language. Which means... When you finish Learning C and move on to some other language you won't have to learn stuff again and again! all you would have to do is just simply see some tutorials, realise syntax of code and you'll be good to go. Learning C is recommended first because it'll tell you what's happening under the hood and you might feel like that there's no need but you are wrong!

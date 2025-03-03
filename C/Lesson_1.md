@@ -39,7 +39,7 @@ int main(void) {
 
 # Understanding the "Hello, World!" C Program
 
-Let's break down this simple C program step by step.
+Let's break down this simple C program.
 
 ## 1. The `#include <stdio.h>` Directive
 
@@ -49,17 +49,20 @@ The first line:
 #include <stdio.h>
 ```
 
-This is a **preprocessor directive**, meaning it is executed before the program is compiled. It imports the `stdio.h` header file, which contains pre-written C code, including the `printf()` function.
+This is a **preprocessor directive**, as from the meaning you can guess it's something that's gonna occur *"initially"* meaning it is executed before the program is compiled [ before you press that ▶️ button].
+ It imports the `stdio.h` header file, which contains pre-written C code, including the `printf()` function. Basically, someone wrote the stdio.h file and included a program that runs when you type 
+ printf()
 
 ### What is `stdio.h`?
 
 - `stdio.h` stands for **Standard Input/Output**.
-- It provides functions for handling input and output in C.
-- The `printf()` function, which we use in this program, is defined in `stdio.h`.
+- It provides functions for handling input and output in C. Meaning you can use this file to enter stuff and get results out of it.
+- The `printf()` function, which we use in this program, is defined in `stdio.h`. 
 
-### Why do we need it?
+### So why do we need it?
 
-Without including `stdio.h`, we wouldn’t be able to use `printf()`. Writing such functionality from scratch would require **hundreds of lines of code**. By using pre-written functions, we make our program **more efficient and manageable**.
+Without including `stdio.h`, we wouldn’t be able to use `printf()` i mean you have to tell the *compiler* that you're using this function.
+ Writing such functionality from scratch would require **hundreds of lines of code**. By using pre-written functions, we make our program **more efficient and manageable**.
 
 > **Tip:** Even though these functions are pre-written, it's beneficial to check out their implementations to understand how they work under the hood.
 
@@ -72,8 +75,8 @@ int main(void) {}
 ```
 
 - `main()` is the **entry point** of a C program.
-- The keyword `int` indicates that the function returns an integer value.
-- The `void` inside parentheses means that `main()` **does not take any arguments**.
+- The keyword `int` indicates that the function returns an integer value. [ `int` is a data type we'll discuss them soon ]
+- The `void` inside parentheses means that `main()` **does not take any arguments**. 
 - Everything inside `{}` (curly braces) belongs to the `main()` function.
 
 ---
@@ -85,7 +88,8 @@ printf("Hello, World!\n");
 ```
 
 - `printf()` is a function that prints text to the console.
-- `"Hello, World!"` is the **argument** passed to `printf()`, specifying what to print.
+- `"Hello, World!"` is the **argument** passed to `printf()`, specifying what to print. [ Suppose you're cooking omelette, but you can't make an omelette without eggs right? that's exactly what arguments are
+You can cook up the best functions, but they're useless if no argument is given! Technically we can work without arguments but i am trying to be beginner friendly here so just bear with it. ]
 - `\n` is an **escape sequence** that moves the cursor to the next line.
 
 ### What is an argument?
@@ -113,7 +117,7 @@ The program ends when the closing `}` is reached. Any code written after this wi
 
 ---
 
-This is how the **"Hello, World!"** program works in C! 🎉
+This is how the **"Hello, World!"** program works in C! 
 
 > **Note:** If you are feeling overwhelmed by the terminologies, you're on the right track! Learning programming concepts can be challenging at first, but with patience, everything will start making sense for now try to understand what happened and move on to next lesson.
 

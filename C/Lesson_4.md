@@ -1,13 +1,16 @@
 # Comments
-
-These are pretty basic so i'll just finish them in short.
 ```c
-int x; // After double slash whatever we write will be ignored by compiler these are called comments.
+int x; // After the double slash, whatever we write will be ignored by the compiler. These are called comments.
+
 /*
-These are Multi-Line comment if we want to write long comments.
-Although you might think to not write them but trust me writing these is extremely important,
-you might feel that you can't write long code or a big project but i'll prove you wrong. you can and you will write a big program and when that happens these comments will save you.
+This is a multi-line comment, used when we want to write longer explanations.
+
+You might think comments aren’t necessary, but trust me, they’re **extremely important**.  
+When you start writing long code, you'll need comments to remember what you did.  
+
+(You might think it’s silly now, but it’s true—so it’s better to build the habit early!)
 */
+
 ```
 # User Input
 
@@ -36,16 +39,22 @@ You'll notice that we called the `scanf()` function, passing two arguments:
 1. **`%d`** - The format specifier for an integer.
 2. **`&input`** - The **ampersand** (`&`) operator.
 
-But why use `&`? Isn't this similar to the logical AND operator? **No, it's different.**
+But what's `&`? Isn't this similar to the logical AND operator? **No, it's different.**
 
 - `%d` is a format specifier, meaning we expect an **integer** input.
-- `&` is called the **address-of operator** and is used to pass the memory address of a variable.
+- `&` is called the **address-of operator** and is used to pass the memory address of a variable. Remember we learned that we can name data on memory addresses ? so that we won't have to deal with the memory itself!
 
 ### Why Use `&` Instead of Just the Variable Name?
 C programming **passes variables to functions by value**, meaning a copy of the variable is passed instead of the actual location in memory.
 
 In our case, the `scanf()` function wants to store the user input **inside** the `input` variable. But if we pass just `input`, it only gets a copy and can't modify the original variable. 
-Instead, we pass the **memory address** of `input` using `&`, allowing `scanf()` to store the input directly in the correct location.
+Instead, we pass the **memory address** of `input` using `&`, allowing `scanf()` to store the input directly in the correct location. If you find this extremely complicated i'll explain this with analogy
+
+  >  Suppose you live in a college hostel with 1,000 people, and your room number is 09. One day, you order a pizza.
+  >  Now, if you only tell the delivery guy that you live in [college name] hostel, how do you expect him to find you?
+  >  That’s why you must tell him your room number too! Otherwise, he’ll never be able to deliver your pizza.
+
+    Similarly, if you don’t tell scanf() where to store your input, it will never reach your variable! Try running the code without &, then print the variable—you’ll see random numbers because your input isn’t reaching the correct memory address.
 
 
 ---
@@ -169,4 +178,4 @@ switch (x) {
 
 Not having a `break` is a common source of **bugs** in C programs. If you intend to allow fall-through, always **leave a comment** to make it clear to others.
 
-**Pro Tip:** Keep `switch` statements limited to **integer types**. Floating-point numbers and strings don’t work, but **character types** (`char`) can be used because they are internally represented as integers in C.
+**Pro Tip:** Keep `switch` statements limited to **integer types**. Floating-point numbers and strings don’t work.
